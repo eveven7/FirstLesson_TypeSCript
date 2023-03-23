@@ -8,17 +8,7 @@
 
 <app-person-info [personAttribute]="parentData" (onClick)="handleChildClick($event)"></app-person-info>
 
-<!-- <app-payments *ngFor="let p of payments">
+<app-payments [payment]="p" *ngFor="let p of payments">
 
-    <div> Name: {{p.name}}</div>
-    <div>Amount: {{p.amount}}</div>
-    <div>Description: {{p.description}}</div>
+</app-payments>
 
-
-</app-payments> -->
-
-<!-- <app-person-info *ngFor="let p of payments" [personAttribute]="payments"> </app-person-info> -->
-
-
-    <!-- 
-<app-person-info *ngIf="parentData.age > 12 || true && 1 == 1" [personAttribute]="parentData"> -->

@@ -14,7 +14,13 @@ export class HomeComponent {
   { name: 'Simon', age: 50 },
   { name: 'Minia', age: 42 }
   ];
+  payments: any[] = [
+    { name: 'clothes', amount: 5000, desciption: 'winter season' },
+    { name: 'restaurant', amount: 50, desciption: 'friday evening' },
+    { name: 'food', amount: 52, desciption: 'month budget' },
+    { name: 'rent', amount: 500, desciption: 'July flat rent' }
 
+  ]
   handleChildClick(mouseEvent: Person) {
     console.log('handleChildClick', mouseEvent);
   }
