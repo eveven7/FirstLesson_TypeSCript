@@ -10,4 +10,6 @@ export class HomeComponent {
 
 
   parentData: Person ={name: 'John', age: 25};
+
+
 }
