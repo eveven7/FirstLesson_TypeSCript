@@ -8,8 +8,15 @@ import { Person } from '../types/person';
 })
 export class HomeComponent {
 
+  parentData: Person = { name: 'John', age: 25 };
+  arrayData: Person[] = [{ name: 'John', age: 25 }, 
+  { name: 'Tom', age: 30 }, 
+  { name: 'Simon', age: 50 },
+  { name: 'Minia', age: 42 }
+  ];
 
-  parentData: Person ={name: 'John', age: 25};
-
+  handleChildClick(mouseEvent: Person) {
+    console.log('handleChildClick', mouseEvent);
+  }
 
 }

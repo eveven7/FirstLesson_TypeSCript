@@ -1,5 +1,24 @@
 <p>home works!</p>
-
-    <app-person-info [personAttribute] = "parentData">
-        <div>  </div>
+<div> age > 12</div>
+<ng-container *ngFor="let person of arrayData"> 
+    <app-person-info *ngIf="parentData.age > 12" [personAttribute]="person">
     </app-person-info>
+
+</ng-container>
+
+<app-person-info [personAttribute]="parentData" (onClick)="handleChildClick($event)"></app-person-info>
+
+<!-- <app-payments *ngFor="let p of payments">
+
+    <div> Name: {{p.name}}</div>
+    <div>Amount: {{p.amount}}</div>
+    <div>Description: {{p.description}}</div>
+
+
+</app-payments> -->
+
+<!-- <app-person-info *ngFor="let p of payments" [personAttribute]="payments"> </app-person-info> -->
+
+
+    <!-- 
+<app-person-info *ngIf="parentData.age > 12 || true && 1 == 1" [personAttribute]="parentData"> -->

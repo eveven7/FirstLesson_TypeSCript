@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Person } from '../types/person';
 
 @Component({
@@ -10,6 +10,9 @@ import { Person } from '../types/person';
 
 export class PersonInfoComponent implements OnInit, AfterViewInit, OnChanges {
   @Input() personAttribute: Person;
+  @Output() onClick: EventEmitter<Person> = new EventEmitter<Person>();
+  //mouseevent- event
+
 
   constructor() {
     console.log('constructor');
@@ -17,20 +20,11 @@ export class PersonInfoComponent implements OnInit, AfterViewInit, OnChanges {
   }
   ngOnInit() {
     console.log('OnInit');
-
-
-
   }
   ngAfterViewInit() {
     console.log('AfterViewInit');
-
-
   }
   ngOnChanges(changes: SimpleChanges) {
-
     console.log('OnChanges', changes);
-
   }
-
-
 }
